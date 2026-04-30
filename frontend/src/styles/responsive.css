@@ -1,0 +1,52 @@
+/* ─── Global responsive styles ─── */
+/* Add this file to src/styles/ and import it in main.jsx */
+
+html {
+  font-size: 16px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', 'Quicksand', -apple-system, system-ui, sans-serif;
+}
+
+@media (max-width: 900px) {
+  html { font-size: 15px; }
+}
+
+@media (max-width: 768px) {
+  html { font-size: 14px; }
+  h1 { font-size: 24px !important; }
+  h2 { font-size: 20px !important; }
+  h3 { font-size: 16px !important; }
+}
+
+@media (max-width: 480px) {
+  html { font-size: 13px; }
+  h1 { font-size: 22px !important; }
+  h2 { font-size: 18px !important; }
+}
+
+body, html, #root {
+  overflow-x: hidden;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  button, a { min-height: 40px; }
+}
+
+@media (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="time"],
+  input[type="date"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
