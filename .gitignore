@@ -21,9 +21,12 @@ npm-debug.log*
 dist/
 build/
 
+<<<<<<< HEAD
 # Database
 database/*.sql
 
+=======
+>>>>>>> d476da35f49d570c753fbebf7d38ddfd07973ec2
 # User uploads (keep folder, ignore contents)
 backend/uploads/avatars/*
 !backend/uploads/avatars/.gitkeep
