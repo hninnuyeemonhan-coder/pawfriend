@@ -1,10 +1,10 @@
 <?php
-// backend/config/database.php
+// backend/config/database.example.php
+// EXAMPLE configuration file - rename to database.php and fill in your own credentials
 
-// CORS - Allow requests from localhost and nuwebspace
+// CORS - Allow requests from localhost and your deployment URL
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
-$allowed = ['http://localhost:5173', 'https://w25043192.nuwebspace.co.uk'];
-
+$allowed = ['http://localhost:5173', 'https://your-deployment-url.example.com'];
 if (in_array($origin, $allowed)) {
     header("Access-Control-Allow-Origin: $origin");
 } else {
@@ -35,10 +35,12 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-define('DB_HOST', 'nuwebspace_db');
-define('DB_NAME', 'w25043192');
-define('DB_USER', 'w25043192');
-define('DB_PASS', 'Jules2005!@#');  // your actual password
+// ─── Database credentials ────────────────────────────────────────────────────
+// Replace these with your own values, then rename this file to database.php
+define('DB_HOST', 'localhost');                  // e.g., 'localhost' or your DB host
+define('DB_NAME', 'YOUR_DATABASE_NAME_HERE');    // e.g., 'pawfriend'
+define('DB_USER', 'YOUR_DATABASE_USER_HERE');    // your DB username
+define('DB_PASS', 'YOUR_DATABASE_PASSWORD_HERE');// your DB password
 
 function getDB() {
     try {

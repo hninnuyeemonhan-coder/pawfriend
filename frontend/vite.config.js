@@ -6,11 +6,11 @@ export default defineConfig({
   plugins: [
     react({ jsxImportSource: '@emotion/react' }),
     VitePWA({
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
       manifest: {
         name: 'PawFriend',
         short_name: 'PawFriend',
-        description: 'Habit tracking app with virtual pet gamification',
+        description: 'Habit tracking app with virtual pet',
         theme_color: '#ffffff',
         icons: [
           { src: 'pwa-192x192.png', sizes: '192x192', type: 'image/png' },
@@ -19,15 +19,5 @@ export default defineConfig({
       }
     })
   ],
-  base: '/w25043192/pawfriend/app/',
-  server: {
-    port: 5173,
-    proxy: {
-      '/api': {
-        target: 'http://localhost/pawfriend/backend',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '/api')
-      }
-    }
-  }
+  base: '/',
 })

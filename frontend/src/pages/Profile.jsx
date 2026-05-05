@@ -92,7 +92,7 @@ export default function Profile() {
     // Already absolute? Return as-is
     if (url.startsWith('http://') || url.startsWith('https://')) return url
     // Relative path — prepend the backend base URL
-    const backendBase = 'https://w25043192.nuwebspace.co.uk/pawfriend/backend'
+    const backendBase = 'https://w25043192.nuwebspace.co.uk/backend'
     // Make sure we don't end up with double slashes
     return `${backendBase}${url.startsWith('/') ? '' : '/'}${url}`
   }

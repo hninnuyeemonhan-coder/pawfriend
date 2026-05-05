@@ -12,6 +12,7 @@ node_modules/
 # OS
 .DS_Store
 Thumbs.db
+desktop.ini
 
 # Logs
 *.log
@@ -21,10 +22,8 @@ npm-debug.log*
 dist/
 build/
 
-
-# Database
-database/*.sql
-
+# Sensitive config files (keep .example versions instead)
+backend/config/database.php
 
 # User uploads (keep folder, ignore contents)
 backend/uploads/avatars/*

@@ -55,7 +55,7 @@ if (move_uploaded_file($file['tmp_name'], $path)) {
     $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
     $host = $_SERVER['HTTP_HOST'];
     // Path to /backend/ — adjust if your folder structure differs
-    $basePath = '/pawfriend/backend';
+    $basePath = '/backend';
     $absoluteUrl = "{$scheme}://{$host}{$basePath}{$avatarUrl}";
 
     $db = getDB();
